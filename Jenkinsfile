@@ -9,10 +9,5 @@ pipeline {
                 sh 'mvn test'
             }
         }
-        stage('Packaging the project') {
-            steps {
-                sh 'mvn package -DskipTests'
-            }
-        }
     }
 }
