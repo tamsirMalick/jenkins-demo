@@ -13,7 +13,7 @@ pipeline {
         stage('Packaging the project') {
             steps {
                 bat 'mvn package -DskipTests'
-                archiveArtifacts artifacts 'build/libs/**/*.jar'
+                archiveArtifacts artifacts: 'target/*.jar'
             }
         }
     }
