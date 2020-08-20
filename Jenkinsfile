@@ -7,6 +7,7 @@ pipeline {
         stage('Test Project') {
             steps {
                 bat 'mvn test'
+                junit 'reports/**/*.xml'
             }
         }
         stage('Packaging the project') {
