@@ -7,7 +7,7 @@ pipeline {
         stage('Test Project') {
             steps {
                 bat 'mvn test'
-                junit 'reports/**/*.xml'
+                junit 'target/surefire_reports/*.xml'
             }
         }
         stage('Packaging the project') {
