@@ -6,7 +6,12 @@ pipeline {
     stages {
         stage('Test Project') {
             steps {
-                sh 'mvn test'
+                bat 'mvn test'
+            }
+        }
+        stage('Packaging the project') {
+            steps {
+                bat 'mvn package -DskipTests'
             }
         }
     }
